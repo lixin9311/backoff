@@ -76,7 +76,7 @@ type Exponential struct {
 // NewExponential creates a exponential backoff algorithm based on given config
 func NewExponential(cfg *Config) Backoff {
 	cfg = fillDefaultConfig(cfg)
-	return &Exponential{Config: &DefaultConfig}
+	return &Exponential{Config: cfg}
 }
 
 // Backoff returns the amount of time to wait before the next retry given the
