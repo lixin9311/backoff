@@ -1,6 +1,7 @@
 # Backoff [![GoDoc][godoc image]][godoc]
 
-This is a Go port of the exponential backoff algorithm modified from [GRPC-go lib][grpc-go-backoff].
+This is a modified version of [gax][gax].
+It also provides an exponential backoff algorithm modified from [GRPC-go lib][grpc-go-backoff].
 
 [Exponential backoff][exponential backoff wiki]
 is an algorithm that uses feedback to multiplicatively decrease the rate of some process,
@@ -9,9 +10,11 @@ The retries exponentially increase and stop increasing when a certain threshold 
 
 ## Usage
 
-`go get -u github.com/lixin9311/backoff`.
+```shell
+go get -u github.com/lixin9311/backoff/v2
+```
 
-Use https://pkg.go.dev/github.com/lixin9311/backoff to view the documentation.
+See [https://pkg.go.dev/github.com/lixin9311/backoff][godoc] to view the documentation.
 
 ## Contributing
 
@@ -21,6 +24,7 @@ Use https://pkg.go.dev/github.com/lixin9311/backoff to view the documentation.
 
 [godoc]: https://pkg.go.dev/github.com/lixin9311/backoff
 [godoc image]: https://pkg.go.dev/github.com/lixin9311/backoff?status.png
+[gax]: https://pkg.go.dev/github.com/googleapis/gax-go
 [grpc-go-backoff]: https://pkg.go.dev/google.golang.org/grpc/backoff
 [exponential backoff wiki]: http://en.wikipedia.org/wiki/Exponential_backoff
 [advanced example]: https://pkg.go.dev/github.com/cenkalti/backoff/v4?tab=doc#pkg-examples
